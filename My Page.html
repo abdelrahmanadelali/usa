@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            height: 100px;
+            width: 100%;
+            background-image: linear-gradient(to right,red,rgb(247,86,86));
+        }
+        #box{
+            height: 100%;
+            border-radius: 50%;
+            float: right;
+        }
+        #header{
+            float: left;
+            line-height: 100px;
+            padding: 0 15px;
+        }
+        #logo{
+            background-color: #fafafa;
+            width: 30%;
+            height: 100%;
+            float: right;
+        }
+        nav a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: inline-block;
+        }
+        nav li{
+            display: inline-block;
+            line-height: 100px;
+            width: 100px;
+            text-align: center;
+        }
+        nav{
+            width: 70%;
+            text-align: center;
+        }
+        header a{
+            color: black;
+        }
+        nav a:hover{
+            background-color: white;
+            color: black;
+            height: 100%;
+            width: 100%;
+        }
+        nav ul li a{
+            color: white;
+            transition: .30s;
+        }
+        main{
+            width: 100%;
+            height: 450px;
+            background-color: rgb(255, 55, 55);
+            border-top: 3px solid white;
+            animation: change 12s infinite;
+        }
+        aside{
+            width: 30%;
+            height: 100%;
+            background-color: #fafafa;
+            text-align: center;
+            float: left;
+        }
+      aside  img{
+            width: 90%;
+        }
+        #h1aside{
+            padding: 20px 0;
+            border-bottom: 2px solid red;
+        }
+        #article{
+            width: 70%;
+            height: 450px;
+            float: right;
+            position: relative;
+        }
+        #bo{
+            padding: 15px;
+            text-align: center;
+            height: 180px;
+            width: 400px;
+            position: absolute;
+            background-color: #fafafa;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #bo h1{
+            border-bottom: 3px solid red;
+            padding: 15px 0;
+        }
+        #bo p{
+            font-family: 'Roboto', sans-serif;
+        }
+        #contact{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        #contact img{
+            width: 45px;
+            border-bottom: 2px double rgb(231, 62, 62);
+            padding-bottom: 10px;
+            padding-left: 3px;
+            padding-right: 3px;
+            transition: .25s;
+        }
+        #contact img:hover{
+            width: 55px;
+            border-bottom: 2px  solid black;
+        }
+        footer img{
+            max-width: 28%;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            clear: both;
+            position: relative;
+            border: none;
+        }
+        footer{
+            text-align: center;
+        }
+        @keyframes change{
+            0%{
+                background-color: white;
+            }
+            100%{
+                background-color: rgb(255, 55, 55);
+            }
+        }
+        @media only screen and (min-width: 940px) and (max-width: 1070px){
+            #logo{
+                width: 35% ;
+            }
+            #article{
+                width: 65%;
+            }
+            aside{
+                width: 35%;
+            }
+        }
+        @media only screen and (max-width: 940px) and (min-width: 802px){
+            #logo{
+                width: 40%;
+            }
+        }
+        @media only screen and (max-width: 801px){
+            header,main{
+                height: auto;
+            }
+            #logo{
+                width: 100%;
+                text-align: center;
+            }
+            #header,#box{
+                float: none;
+                text-align: center;
+            }
+            #box{
+                width: 40%;
+            }
+            span a{
+                text-decoration: none;
+            }
+            nav{
+                width: 100%;
+            }
+            aside{
+                width: 100%;
+            }
+            #bo{
+                text-align: center;
+                background-color: #fafafa;
+                
+                
+            }
+            main{
+                animation: change 15s infinite;
+            }
+            #article{
+                width: 100%;
+            }
+            @keyframes change{
+            0%{
+                background-color: white;
+            }
+            25%{
+                background-color: royalblue;
+            }
+            50%{
+                background-color: rgb(255, 55, 55);
+            }
+            100%{
+                background-color: black;
+            }
+        }
+        }
+        @media only screen and (max-width: 500px){
+            nav li{
+                display:inline-block;
+                width: 100%;
+            }
+            @media only screen and (max-width: 330px){
+            #article {
+                width: 70%;
+            }
+            header,aside,footer{
+                width: 140%;
+            }
+        }
+        
+   }
+    </style>
+</head>
+<body>
+    <header>
+        <span id="logo">
+            <a href="#"><img src="profile.png" id="box"></a>
+            <a href="#"><h1 id="header">Ahmed Adel</h1></a>
+        </span>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">الصفحة الرئيسية</a>
+                </li>
+                <li>
+                    <a href="#">الفيديوهات</a>
+                </li> 
+                <li>
+                    <a href="#">القوائم التشغيل</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <a href="#"><img src="mountain.jpg"></a>
+            <h1 id="h1aside">Abdelrahman Adel</h1>
+            <div id="contact">
+                <a href=""><img src="map.png""></a>
+                <a href=""><img src="facebook.png"></a>
+                <a href=""><img src="youtube.png"></a>
+            </div>
+        </aside>
+        <article id="article">
+            <div id="bo">
+                <h1>أنا مهندس برمجيات</h1>
+                <p>أنا اعيش فى مصر لدى خبرة فى لغات البرمجة التصميم المواقع واساعد الأخرين
+                    فى تعلم البرمجة عبر الدروس اونلاين
+                </p>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <a href="#"><img src="unnamed (1).jpg" ></a>
+        <a href="#"><img src="unnamed (2).jpg"></a>
+        <a href="#"><img src="unnamed (3).jpg"></a>
+        <a href="#"><img src="unnamed (1).png"></a>
+        <a href="#"><img src="unnamed.png"></a>
+        <a href="#"><img src="unnamed.jpg"></a>
+    </footer>
+</body>
+</html>
